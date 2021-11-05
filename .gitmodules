@@ -1,0 +1,3 @@
+[submodule "chromium-vim"]
+	path = chromium-vim
+	url = https://github.com/mflova/chromium-vim
