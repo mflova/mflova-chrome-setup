@@ -5,6 +5,7 @@ To use it, install google chrome and its extension called "Vimium"
 |Command/shortcut| Description|
 |----------------|------------|
 |ctrl+t|New tab|
+|ctrl+d|Create bookmark|
 |ctrl+w|Close tab|
 |ctrl+avpag/repag|Next or previous tab|
 |ctrl+number|Chose a tab|
@@ -23,21 +24,19 @@ This has to be done every time this script is changed.
 
 Since this plugin based on Vimium does not work in google chrome new tabs, it is recommmended to install "New tab redirect" plugin and set a page like "blank.org".
 
-If the configuration is not loaded properly try one of these:
-- Ensure that the path in background_scripts/options.js configpath: is set up correctly
-- Execute :source <path_to_cvimrc>
+General note: For websites, it is used: w(t)(identifier_web) being t the possibility to open the page in a new tab and the identifier is tipically the ifrst key of the website. For repositories, the command is w(t)r(identifier_web).
 
-General note: All the shortcuts that have an equivalent capital letter will perform the action in a new tab.
 |Command/shortcut| Description|
 |----------------|------------|
 | Tab/Shift+Tab | Move between the options in the menu|
 | h/H | Fuzzy finder history |
 | b/B | Fuzzy finder bookmarks |
+| t | Fuzzy finder tabs|
 |f/F|Select keywords from the website|
+|mf|Opens multiple pages with f|
 |p/P| Print the clipboard in the URL bar|
-|wj/WJ|Opens Jira |
-|wg/WG|Opens Gmail|
-|wd/WD|Opens Google drive|
-|wc/WC|Opens Google calendar|
-|wh/WH|Opens Holaspirit|
-|wo/WO|Opens Odoo|
+|Ctrl+z|Reopens last closed tab|
+|A/D| Move backwords/forward in history of the tab|
+
+The configuration can be changed either in content_scripts/mapping.js or in background_scripts/options.js. Necessary to recompile with "npm install" and "make" whenever you change something from there.
+Note: npm version 8.1.0, nodejs version 10.19.10
