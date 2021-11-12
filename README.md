@@ -24,7 +24,7 @@ This has to be done every time this script is changed.
 
 Since this plugin based on Vimium does not work in google chrome new tabs, it is recommmended to install "New tab redirect" plugin and set a page like "blank.org".
 
-General note: For websites, it is used: w(t)(identifier_web) being t the possibility to open the page in a new tab and the identifier is tipically the ifrst key of the website. For repositories, the command is w(t)r(identifier_web).
+General note: For websites, it is used: w<key_that_identifies_web> and for repositories is r<key_that identifies_web>. If any of these letters are capital ones, the website will be opened in a new tab.
 
 |Command/shortcut| Description|
 |----------------|------------|
@@ -35,8 +35,11 @@ General note: For websites, it is used: w(t)(identifier_web) being t the possibi
 |f/F|Select keywords from the website|
 |mf|Opens multiple pages with f|
 |p/P| Print the clipboard in the URL bar|
-|Ctrl+z|Reopens last closed tab|
+|Alt+Z|Reopens last closed tab|
 |A/D| Move backwords/forward in history of the tab|
+|Alt+A/Alt+D| Previous/Next tab|
+|a/d| Scroll page down and up|
+|S| Alternate between two last tabs used|
 
 The configuration can be changed either in content_scripts/mapping.js or in background_scripts/options.js. Necessary to recompile with "npm install" and "make" whenever you change something from there.
 Note: npm version 8.1.0, nodejs version 10.19.10
